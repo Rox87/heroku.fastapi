@@ -1,12 +1,12 @@
 from fastapi import FastAPI, Request
 from fastapi.middleware.trustedhost import TrustedHostMiddleware
-import socket
+
 app = FastAPI()
 
-hostname = socket.gethostname()
+
 
 app.add_middleware(
-    TrustedHostMiddleware, allowed_hosts=["*"] 
+    TrustedHostMiddleware, allowed_hosts=["177.181.7.139"]
 )
 
 
