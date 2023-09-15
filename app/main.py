@@ -6,7 +6,7 @@ app = FastAPI()
 
 
 app.add_middleware(
-    TrustedHostMiddleware, allowed_hosts=["177.181.7.139"]
+    TrustedHostMiddleware, allowed_hosts=["*"]
 )
 
 
