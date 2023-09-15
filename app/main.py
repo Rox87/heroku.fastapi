@@ -1,4 +1,4 @@
-from fastapi import FastAPI 
+from fastapi import FastAPI, Request
 from fastapi.middleware.trustedhost import TrustedHostMiddleware
 import socket
 app = FastAPI()
@@ -11,5 +11,6 @@ app.add_middleware(
 
 
 @app.get("/") 
-async def main():
-    return {"message": f"{hostname}"}
+async def main(request: Request):
+    client_host = request.client.host
+    return {"client_host": client_host}
