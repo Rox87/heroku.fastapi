@@ -4,7 +4,7 @@ from fastapi.middleware.trustedhost import TrustedHostMiddleware
 app = FastAPI()
 
 app.add_middleware(
-    TrustedHostMiddleware, allowed_hosts=["127.0.0.1"] 
+    TrustedHostMiddleware, allowed_hosts=["177.181.7.139"] 
 )
 
 
